@@ -66,6 +66,7 @@ export default function Home() {
 
     const shortenedLink = link
       .replace(/https?:\/\//, "")
+      .replace(/http?:\/\//, "")
       .replace(/^www\./, "")
       // slashes with hyphens
       .replace(/\//g, "-")
@@ -74,7 +75,9 @@ export default function Home() {
       // ampersands with underscores
       .replace(/&/g, "_")
       // remaining invalid characters except dot
-      .replace(/[^a-zA-Z0-9._-]/g, "");
+      .replace(/[^a-zA-Z0-9./\_-]/g, "")
+      // remove last character if it is not a letter or number
+      .replace(/[_\-.]+$/, "");
 
     downloadLink.download = `qr-code (${encodeURIComponent(
       shortenedLink
