@@ -60,7 +60,6 @@ The link you entered will be displayed below the QR code and it will remain unch
 
 ## Future Enhancements
 
-- [ ] Implement a server-side approach for generating QR codes.
 - [ ] Add functionality to share QR codes via email, Whatsapp and other social media platforms.
 - [ ] Enhance the design with more custom styles and themes.
 
